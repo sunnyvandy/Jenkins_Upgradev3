@@ -12,6 +12,12 @@ pipeline {
                 }
             }
         }
-         
+       stage('Deploy in Staging Environment'){
+            steps{
+                build job: 'J1-deploy-tomcat'
+
+            }
+            
+        }  
     }
 }
